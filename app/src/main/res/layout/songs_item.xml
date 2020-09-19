@@ -9,10 +9,7 @@
             type="com.example.songapplication.network.Songs" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/parentLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/songCardView"
@@ -68,5 +65,4 @@
 
         </androidx.cardview.widget.CardView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

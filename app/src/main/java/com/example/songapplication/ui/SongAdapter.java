@@ -1,12 +1,10 @@
 package com.example.songapplication.ui;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.ViewModel;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.songapplication.R;
@@ -14,15 +12,13 @@ import com.example.songapplication.databinding.SongItemBinding;
 import com.example.songapplication.network.Songs;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
 
 public class SongAdapter extends RecyclerView.Adapter<SongAdapter.songsAdapterClass> {
 
-    private List<Songs> listOfSongs ;
+    private List<Songs> listOfSongs;
 
-    public SongAdapter(List<Songs> listOfSongs){
+    public SongAdapter(List<Songs> listOfSongs) {
         this.listOfSongs = listOfSongs;
     }
 
@@ -30,7 +26,7 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.songsAdapterCl
     @Override
     public songsAdapterClass onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        SongItemBinding songItemBinding = DataBindingUtil.inflate(inflater, R.layout.songs_item,parent,false);
+        SongItemBinding songItemBinding = DataBindingUtil.inflate(inflater, R.layout.songs_item, parent, false);
         return new songsAdapterClass(songItemBinding);
     }
 
@@ -46,15 +42,16 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.songsAdapterCl
         return listOfSongs.size();
     }
 
-    public static class songsAdapterClass extends RecyclerView.ViewHolder{
+    public static class songsAdapterClass extends RecyclerView.ViewHolder {
 
         SongItemBinding itemBinding;
+
         public songsAdapterClass(@NonNull SongItemBinding itemBinding) {
             super(itemBinding.getRoot());
             this.itemBinding = itemBinding;
         }
 
-        public void bind(Songs songs){
+        public void bind(Songs songs) {
             itemBinding.setSong(songs);
         }
     }

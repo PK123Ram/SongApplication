@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.songapplication.R;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Songs>> call, Response<List<Songs>> response) {
                 setUpRecyclerView(response.body());
+                Log.i("MainActivity", "onResponse: onSuccess");
             }
 
             @Override

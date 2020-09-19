@@ -13,7 +13,7 @@ public class Songs {
     private String songCoverImage;
     @SerializedName("url")
     private String songUrl;
-    
+
     public Songs(){}
 
     public Songs(String title, String artists, String songCoverImage, String songUrl) {
